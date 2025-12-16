@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Real-Time Spell Corrector",
+  "version": "1.0",
+  "description": "Real-time spell correction using Levenshtein distance",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dictionary.js", "spellcheck.js", "content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
